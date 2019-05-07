@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const CdrSchema = new mongoose.Schema({
+    ip:{type:String,default:''},
     clid: { type: String, default: null},
     src: {type:String, default: null},
     dst:{type:String,default:null},

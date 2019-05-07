@@ -5,7 +5,8 @@ cors = require('cors'),
 mongoose = require('mongoose');
 
 mongoose.connect('mongodb://nodeuser:nodeuser@localhost/asteriskcdrdb?authSource=admin', { useNewUrlParser: true });
-// mongoose.set('debug', true); 
+mongoose.set('useCreateIndex', true);
+mongoose.set('debug', true);
 
 const app = express();
 
