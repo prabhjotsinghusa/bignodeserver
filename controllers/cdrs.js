@@ -9,7 +9,7 @@ const Tfn = mongoose.model('Tfn');
 const cdr = {};
 
 cdr.getAll = (req, res, next) => {
-    Cdr.find().then(data => {
+    Cdr.find().limit(10).then(data => {
         res.json({ cdr: data });
     });
 }
